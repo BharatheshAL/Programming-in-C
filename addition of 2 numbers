@@ -7,5 +7,6 @@ printf( " enter two numbers to add \n");
 scanf("%d,%d\n", &a, &b);
 c=a+b;
 printf(" the addition of two numbers is %d :", c);
+printf("\nThis completes this example");
 return 0;
 }
