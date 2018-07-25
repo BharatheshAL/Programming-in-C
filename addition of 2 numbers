@@ -8,5 +8,7 @@ scanf("%d,%d\n", &a, &b);
 c=a+b;
 printf(" the addition of two numbers is %d :", c);
 printf("\nThis completes this example");
+printf("\n***********This completes this example");
+
 return 0;
 }
