@@ -1,0 +1,35 @@
+Bit fields in C:
+
+*Bit fields is used to specify the size(in bits) for "structure and union " members.
+
+syntsx::  structure or union{
+                       type mem_name : width;
+                       };
+                       
+                       here " : and width" is for defining bits.
+  * idea is to use the memory efficiently, when we know that value of the field doesnot exceed the value of type.
+  
+  ex:
+  struct date{
+  int date;
+  int month;
+  int year;
+  };
+  
+  int main(){
+  struct dt;
+  
+  printf("the size of %d is\n", size_of(struct date));   //output: 12bytes; 20-8-1991; 
+  struct date dt={20,8,1991};
+  printf("%d%d%d\n", dt.date,dt.month,dt.year);
+  return 0;
+  }
+
+After specifying "bits" for above program, struct members :
+  struct date{
+  int date : 5; // because date is from 1-31, so 5bits are enough to store date, i.e, 2^5=2*2*2*2*2=32. //
+  int month : 4; // because for month 1-12, so 4 bits are enough to store month , i.e: 2^4=2*2*2*2=16 //
+  int year;
+  };
+
+                       
