@@ -1,0 +1,115 @@
+Multi-Dimensional Arrays: Array of arrays known as multidimensional array.
+two types: (a) 2D-array.
+           (b) 3D-array.
+           
+2D-array: syntax: data_type array_name[][]:
+          ex: float a[3][4]:
+          (a): we can think that, 2D array is a table of rows and columns.
+          (b): in the above column array variable 'x' have 3-rows and 4columns and total of 12 elements.
+          (c): each row has 4 columns.
+         https://cdn.programiz.com/sites/tutorial2program/files/two-dimensional-array.jpg.
+Initialization of 2D-array.
+
+different ways to initialize a 2D array.
+
+ex1: int x[3][4] ={{1,2,4,5}, {-1,5,7,3},{8,5,4,2}};
+ex2: int x[][4] ={{1,2,4,5},{-1,5,7,3},{8,5,4,2}};
+ex3: int x[3][4]={1,2,4,5, -1,5,7,3, 8,5,4,2};
+
+Eg: 2d-array example, writing the values to the 2d array and printing those values :
+#include <stdio.h>
+ 
+int main () {
+    int x=3;
+    int y=2;
+
+   /* an array with 5 rows and 2 columns*/
+   int a[3][2];
+   
+   int i, j;
+printf("enter the values of x and y for array a[x][y]\n");
+scanf("&d,&d\n", x,y);
+printf("enter the elements for table x and y\n");
+   for(i=0;i<3;i++){
+     // if condn true, contrl goes into inner for loop and increment 'i' ,check the condn, execute inner for loop// 
+       // repeat till the condition i<5 fails//
+   for(j=0;j<2;j++){ 
+       // check the condition j<2, if true print the 2d array[][] positions print a[0][0],and incremernt j+1// 
+       // again check the condition,1<2, true print a[0][1], again increment j+1// 
+       //now condn 2<2, condn fails, control exit the loop and goes back to outer loop// 
+       // their i incremented and repeat the same till condition fails for all// 
+       printf("[%d][%d]\n",i,j);
+       // print the position to enter the values //
+       scanf("%d\n", &a[i][j]);
+       // read the values into that position//
+   }
+}
+printf("\n");
+printf("elements present in 2d-array a[x][y] are\n");
+ 
+   /* output each array element's value */
+   for ( i = 0; i < x; i++ ) {
+
+      for ( j = 0; j < y; j++ ) {
+         printf("a[%d][%d] = %d\n", i,j, a[i][j] );
+      }
+   }
+   
+   return 0;
+}
+
+Example2: adding 2 dimentional matrix and printing the result.
+
+#include<stdio.h>
+int main(){
+
+float A[3][2];
+float B[3][2];
+float C[3][2];
+
+int i,j;
+
+printf("first matrix\n");
+
+for(i=0;i<3;i++){
+	for(j=0;j<2;j++){
+	
+		
+		printf("Enter the elements into A[%d][%d] positions\n", i,j);
+		scanf("%f\n", &A[i][j]);
+		
+}
+}
+
+printf("Enter the elements into -B-matrix \n");
+for(i=0;i<3;i++){
+	for(j=0;j<2;j++){
+		
+		printf("Enter the elements into B[%d][%d] positions \n", i,j);
+		scanf("%f\n", &B[i][j]);
+	}
+}
+
+printf("Adding matrix A and matrix B \n");
+
+for(i=0;i<3;i++){
+	for(j=0;j<3;j++){
+		
+		C[i][j]=A[i][j]+B[i][j];
+	}
+}
+
+printf("the sum of the matrix is C[i][j] is  \n");
+
+for(i=0;i<3;i++){
+	for(j=0;j<2;j++){
+		
+		printf("%f\t", C[i][j]);
+		
+		if(j==1)
+		printf("\n");
+		
+	}
+}
+return 0;
+}
