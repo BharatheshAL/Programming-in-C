@@ -1,0 +1,34 @@
+Precedence of operators
+
+If more than one operators are involved in an expression, C language has a predefined rule of priority for the operators. This rule of priority of operators is called operator precedence.
+
+In C, precedence of arithmetic operators( *, %, /, +, -) is higher than relational operators(==, !=, >, <, >=, <=) and precedence of relational operator is higher than logical operators(&&, || and !).
+Example of precedence
+
+(1 > 2 + 3 && 4)
+This expression is equivalent to:
+((1 > (2 + 3)) && 4)
+i.e, (2 + 3) executes first resulting into 5
+then, first part of the expression (1 > 5) executes resulting into 0 (false)
+then, (0 && 4) executes resulting into 0 (false)
+
+Output
+
+0
+
+Associativity of operators
+
+If two operators of same precedence (priority) is present in an expression, Associativity of operators indicate the order in which they execute.
+Example of associativity
+
+1 == 2 != 3
+
+Here, operators == and != have same precedence. The associativity of both == and != is left to right, i.e, the expression on the left is executed first and moves towards the right.
+
+Thus, the expression above is equivalent to :
+
+((1 == 2) != 3)
+i.e, (1 == 2) executes first resulting into 0 (false)
+then, (0 != 3) executes resulting into 1 (true)
+
+                                          
